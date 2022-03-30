@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springboot-demo-data-mongo
+  data:
+    mongodb:
+      replica-set-name: gm9233i-test1.bjgh.db.lecloud.com:9233,gm9233i-test2.bjgh.db.lecloud.com:9233,gm9233i-test3.bjgh.db.lecloud.com:9233
+      database: loop-cc
+      password: erwrfwe3434311dfd
+      username: admin_zb
+      authentication-database: admin

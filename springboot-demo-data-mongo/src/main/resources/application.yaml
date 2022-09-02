@@ -3,8 +3,43 @@ spring:
     name: springboot-demo-data-mongo
   data:
     mongodb:
-      replica-set-name: gm9233i-test1.bjgh.db.lecloud.com:9233,gm9233i-test2.bjgh.db.lecloud.com:9233,gm9233i-test3.bjgh.db.lecloud.com:9233
-      database: loop-cc
-      password: erwrfwe3434311dfd
-      username: admin_zb
-      authentication-database: admin
+#      uri: "mongodb://loop-cc:NDk5NjM1NmY1Zjg@\
+#          gm9438i-1.bjgh.db.lecloud.com:9438,\
+#          gm9438i-2.bjgh.db.lecloud.com:9438,\
+#          gm9438i-3.bjgh.db.lecloud.com:9438/\
+#          loop-cc\
+#          ?authSource=loop-cc"
+
+      # 含义参见 https://www.mongodb.com/docs/v4.4/reference/connection-string/
+      uri: "mongodb://admin_zb:erwrfwe3434311dfd@\
+        gm9233i-test1.bjgh.db.lecloud.com:9233,\
+        gm9233i-test2.bjgh.db.lecloud.com:9233,\
+        gm9233i-test3.bjgh.db.lecloud.com:9233/\
+        loop-cc\
+        ?authSource=admin"
+
+    #      custom:
+#        hosts:
+#          - gm9233i-test1.bjgh.db.lecloud.com
+#          - gm9233i-test2.bjgh.db.lecloud.com
+#          - gm9233i-test3.bjgh.db.lecloud.com
+#        ports:
+#          - 9233
+#          - 9233
+#          - 9233
+#        database: loop-cc
+#        username: admin_zb
+#        password: erwrfwe3434311dfd
+#        authenticationDatabase: admin
+
+  #      connectionsPerHost: 8 # 一个线程变为可用的最大阻塞数
+  #      threadsAllowedToBlockForConnectionMultiplier: 4  #线程队列数,它以上面connectionsPerHost值相乘的结果就是线程队列最大值
+  #      connectTimeout: 1500
+  #      maxWaitTime: 1500
+  #      socketTimeout: 1500
+  #      socketKeepAlive: true # 保持连接
+  #      maxConnections: 100
+  #      minConnections: 20
+  #      maxQueue: 10
+server:
+  port: 18082

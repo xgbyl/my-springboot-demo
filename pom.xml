@@ -55,5 +55,6 @@
     <modules>
         <module>springboot-demo-web</module>
         <module>springboot-demo-data-mongo</module>
+        <module>spring-boot-demo-distributed</module>
     </modules>
 </project>
